@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>  
+    <constant name="struts.i18n.encoding" value="utf-8"/>
+    
+    <package name="default" extends="struts-default">   
+        <action name="LoginAction" method="login" class="com.xiongyu.web.LoginAction">    
+		 	<result name="success0">/editorFrame.jsp</result>  
+		 	<result name="success1">/adminFrame.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+        <action name="LogoutAction" method="logout" class="com.xiongyu.web.LogoutAction">    
+		 	<result>/index.jsp</result> 
+		 	<result name="fail">/login.jsp</result> 
+        </action>
+        <action name="RegisterAction" method="regist" class="com.xiongyu.web.RegisterAction">    
+		 	<result name="success">/index.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+        <action name="CreateNewsAction" method="createNews" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/empty.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+         <action name="ShowNewsAction" method="showNews" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/myNews.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+         <action name="LoadNewsBoxAction" method="loadNewsBox" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/newsBox.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+        <action name="LoadHotNewsBoxAction" method="loadhotNewsBox" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/hotNewsBox.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+         <action name="ShowNewsTypeAction" method="showNewsType" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/newsTypeList.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+        <action name="ShowCheckNewsAction" method="showNews" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/checkNews.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+        <action name="CheckNewsAction" method="checkNews" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">checkNews.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+         <action name="UnCheckNewsAction" method="unCheckNews" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/myNews.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+         <action name="PreviewNewsAction" method="previewNews" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/preview.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+         <action name="SearchNewsAction" method="searchNews" class="com.xiongyu.web.NewsAction">    
+		 	<result name="success">/searchResultList.jsp</result> 
+		 	<result name="fail">/error.jsp</result> 
+        </action>
+    </package>  	
+</struts> 
