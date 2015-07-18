@@ -23,6 +23,9 @@ public class Search {
 		}
 	}
 
+	/**
+	 * HelloWorld
+	 */
 	public void keyWordsSearch1() {
 		NewsDao newsdao = new NewsDaoImpl();
 		try {
