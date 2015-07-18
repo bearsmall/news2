@@ -9,6 +9,10 @@ import com.xiongyu.dao.impl.NewsDaoImpl;
 import com.xiongyu.model.NewsModel;
 import com.xiongyu.utils.AppException;
 
+/**搜索的测试类
+ * @author xiong
+ *
+ */
 public class Search {
 
 	public void hotSearch() {
